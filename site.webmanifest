@@ -1,0 +1,14 @@
+{
+  "name": "Neat & Bright Homes LLC",
+  "short_name": "Neat & Bright",
+  "icons": [
+    {
+      "src": "assets/site-icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "theme_color": "#001d39",
+  "background_color": "#f8f3ec",
+  "display": "standalone"
+}
