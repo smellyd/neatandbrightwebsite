@@ -68,8 +68,9 @@ a {
 .site-nav {
   grid-column: 2;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: clamp(16px, 3vw, 36px);
+  gap: clamp(14px, 2.4vw, 30px);
   color: var(--navy);
   font-size: 0.9rem;
   font-weight: 800;
@@ -84,6 +85,26 @@ a {
 .site-nav a:hover,
 .site-nav a:focus-visible {
   color: var(--green);
+}
+
+.instagram-link {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: var(--navy);
+  border: 1px solid rgba(0, 29, 57, 0.18);
+  border-radius: 50%;
+}
+
+.instagram-link svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .header-call,
@@ -251,6 +272,7 @@ h3 {
 .services-section,
 .about-section,
 .offer-section,
+.reviews-section,
 .contact-section {
   padding: clamp(64px, 9vw, 116px) clamp(22px, 5vw, 72px);
 }
@@ -311,14 +333,17 @@ h3 {
 .about-section {
   display: grid;
   grid-template-columns: minmax(240px, 0.58fr) minmax(0, 1.42fr);
-  gap: clamp(30px, 7vw, 90px);
+  gap: clamp(24px, 5vw, 64px);
   align-items: center;
+  padding-top: clamp(34px, 5vw, 58px);
+  padding-bottom: clamp(34px, 5vw, 58px);
   background: #fffdfa;
 }
 
 .owner-photo {
   justify-self: center;
-  width: min(100%, 360px);
+  width: min(100%, 280px);
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   border: 8px solid var(--cream);
   border-radius: 8px;
@@ -327,16 +352,16 @@ h3 {
 
 .owner-photo img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: 100%;
   object-fit: cover;
   object-position: 50% 34%;
 }
 
 .check-list {
   display: grid;
-  gap: 12px;
+  gap: 8px;
   padding: 0;
-  margin: 26px 0 0;
+  margin: 18px 0 0;
   list-style: none;
 }
 
@@ -366,6 +391,25 @@ h3 {
   max-width: 900px;
   margin: 0;
   color: var(--cream);
+}
+
+.reviews-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.65fr);
+  gap: 28px;
+  align-items: end;
+  background: #fffdfa;
+  border-bottom: 1px solid var(--line);
+}
+
+.reviews-section .section-heading {
+  margin-bottom: 0;
+}
+
+.reviews-section p:last-child {
+  margin: 0;
+  color: #344054;
+  font-size: 1.1rem;
 }
 
 .contact-section {
@@ -609,6 +653,7 @@ h3 {
 
   .intro-section,
   .about-section,
+  .reviews-section,
   .contact-section {
     grid-template-columns: 1fr;
   }
