@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smellyd.github.io/neatandbrightwebsite/sitemap.xml

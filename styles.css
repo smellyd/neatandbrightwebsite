@@ -90,11 +90,11 @@ a {
 .instagram-link {
   display: inline-grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+  width: 24px;
+  height: 24px;
   color: var(--navy);
-  border: 1px solid rgba(0, 29, 57, 0.18);
-  border-radius: 50%;
+  line-height: 1;
+  transform: translateY(-10px);
 }
 
 .instagram-link svg {
@@ -172,9 +172,11 @@ a {
 }
 
 .hero-media img {
-  width: 100%;
+  width: calc(100% + 100px);
+  max-width: none;
   height: 100%;
   object-fit: cover;
+  transform: translateX(-100px);
 }
 
 .hero-content {
@@ -255,17 +257,23 @@ h3 {
 .trust-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px 22px;
   max-width: 700px;
 }
 
 .trust-row span {
-  padding: 10px 14px;
+  position: relative;
+  padding-left: 18px;
   color: var(--gold-light);
-  border: 1px solid rgba(240, 217, 144, 0.32);
-  border-radius: 999px;
   font-size: 0.86rem;
   font-weight: 800;
+}
+
+.trust-row span::before {
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  content: "•";
 }
 
 .intro-section,
@@ -391,6 +399,12 @@ h3 {
   max-width: 900px;
   margin: 0;
   color: var(--cream);
+}
+
+.offer-section .button {
+  flex: 0 0 auto;
+  min-width: 196px;
+  white-space: nowrap;
 }
 
 .reviews-section {
@@ -599,6 +613,13 @@ h3 {
 @media (max-width: 1080px) {
   .service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1240px) {
+  .offer-section {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 
