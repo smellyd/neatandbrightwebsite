@@ -287,11 +287,28 @@ h3 {
 
 .intro-section {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.58fr) minmax(220px, 0.5fr);
   gap: clamp(28px, 6vw, 86px);
-  align-items: end;
+  align-items: center;
   background: var(--cream);
   border-bottom: 1px solid var(--line);
+}
+
+.intro-image {
+  justify-self: end;
+  width: min(100%, 300px);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 8px solid #fffdfa;
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(0, 29, 57, 0.1);
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% 72%;
 }
 
 .intro-section p:last-child,
@@ -677,6 +694,10 @@ h3 {
   .reviews-section,
   .contact-section {
     grid-template-columns: 1fr;
+  }
+
+  .intro-image {
+    justify-self: start;
   }
 
   .offer-section {
