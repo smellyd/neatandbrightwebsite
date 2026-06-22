@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://smellyd.github.io/neatandbrightwebsite/sitemap.xml
+Sitemap: https://neatandbrighthomes.com/sitemap.xml
