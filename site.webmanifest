@@ -3,9 +3,9 @@
   "short_name": "Neat & Bright",
   "icons": [
     {
-      "src": "assets/site-icon-512.jpg",
+      "src": "/favicon.png",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png"
     }
   ],
   "theme_color": "#001d39",
